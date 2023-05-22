@@ -34,7 +34,7 @@
  
 
 
-<script src="details.js"></script>
+  <script src="details.js"> </script> 
 
 </body>
 </html>

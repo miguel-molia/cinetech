@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap'); */
+
+
 main{
 
 
@@ -417,14 +420,29 @@ background-color: #101010;
 }
 
 
-#precedent {
+#precedent-film {
 
     color: black;
     font-size: 23px;
     background-color: #1c92d2;
 }
 
-#suivant {
+#precedent-serie {
+
+    color: black;
+    font-size: 23px;
+    background-color: #1c92d2;
+}
+
+#suivant-film {
+
+    color: black;
+    font-size: 23px;
+    background-color: #1c92d2;
+    
+}
+
+#suivant-serie {
 
     color: black;
     font-size: 23px;
@@ -629,3 +647,10 @@ font-size: 18px;
     display: flex;
     flex-wrap: wrap;
 }
+
+.autocomplete-result {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+  }

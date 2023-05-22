@@ -35,8 +35,8 @@
   
   
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" id="precedent"> Prev </a></li>
-   <li class="page-item"><a class="page-link" id="suivant"> Next </a></li>
+    <li class="page-item"><a class="page-link" id="precedent-serie"> Prev </a></li>
+   <li class="page-item"><a class="page-link" id="suivant-serie"> Next </a></li>
    </ul>
  
 </div>
@@ -47,16 +47,8 @@
   
   </main>
 
-  <div class="prec_suiv">
   
-  
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" id="precedent"> Prev </a></li>
-   <li class="page-item"><a class="page-link" id="suivant"> Next </a></li>
-   </ul>
- 
-</div>
 
+<script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>

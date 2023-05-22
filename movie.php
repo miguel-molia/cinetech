@@ -22,11 +22,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   </head>
-
+  
   <body>
-
+    
     <header>
-
+      
       <?php require("./header.php");  ?>
 
 
@@ -42,8 +42,8 @@
 
 
       <ul class="pagination">
-        <li class="page-item"><a class="page-link" id="precedent"> Prev </a></li>
-        <li class="page-item"><a class="page-link" id="suivant"> Next </a></li>
+        <li class="page-item"><a class="page-link" id="precedent-film"> Prev </a></li>
+        <li class="page-item"><a class="page-link" id="suivant-film"> Next </a></li>
       </ul>
 
     </div>
@@ -55,24 +55,17 @@
     </main>
 
 
-    <div class="prec_suiv">
-
-
-      <ul class="pagination">
-        <li class="page-item"><a class="page-link" id="precedent"> Prev </a></li>
-        <li class="page-item"><a class="page-link" id="suivant"> Next </a></li>
-      </ul>
-
-    </div>
+    
 
     <footer>
 
 
 
     </footer>
-
+  <script src="script.js"></script>
+  
   </body>
 
   </html>
-  <script src="script.js"></script>
+  
 <?php } ?>

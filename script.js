@@ -6,12 +6,10 @@ const cleapi = 'e440027325819bdc8e51f492e2bac3f9';
 // const url = `https://api.themoviedb.org/3/movie/popular?api_key=${cleapi}&language=fr-FR`;
 
 function FetchMoviesOrSeries(type,divMedia,params,page){
-  
     fetch(`https://api.themoviedb.org/3/${type}/${params}?api_key=${cleapi}&language=fr-FR&page=${page}`)
 
     //Convertit les données de la réponse HTTP en JSON
     .then(response => response.json())
-
     //Traite les données JSON dans la fonction fléchée
     .then(data => {
         // console.log(type);
@@ -24,10 +22,11 @@ function FetchMoviesOrSeries(type,divMedia,params,page){
         // console.log(data);
         const divMediaById = document.getElementById(divMedia);
         console.log(divMediaById);
+        
 
         //Parcourt chaque objet film dans l'objet 'results' de l'API
         data.results.forEach(media => {  
-            // console.log(media)
+            // console.table(media.genre_ids)
 
             //Cree une const qui cible dans le dom l'id 'accueil-film'
             // console.log(divMediaById)
@@ -74,8 +73,9 @@ function FetchMoviesOrSeries(type,divMedia,params,page){
 
             //Ajoute l'élément <div> au conteneur divFilmHomePage 
             divMediaById.append(div);
-
+                // console.log(divMedia);
             }
+            
             // console.log(media.title); // j'affiche chaque  [x]
             // console.log(element.title); // j'affiche chaque titre pour [x]
 
@@ -99,11 +99,13 @@ function FetchMoviesOrSeries(type,divMedia,params,page){
 
 const films = document.getElementById('films');
 const series = document.getElementById('series');
-const precedent = document.getElementById('precedent');
-const suivant = document.getElementById('suivant');
+const precedent_f = document.getElementById('precedent-film');
+const suivant_f = document.getElementById('suivant-film');
+const precedent_s = document.getElementById('precedent-serie');
+const suivant_s = document.getElementById('suivant-serie');
 
 // Vérifie si les variables films, precedent, et suivant existent et sont toutes vraies
-if (films && precedent && suivant) {
+if (films && precedent_f && suivant_f) {
 
     // Récupère l'URL complète de la page web actuelle
     const URL = window.location.href;
@@ -119,15 +121,15 @@ if (films && precedent && suivant) {
 FetchMoviesOrSeries('movie', 'films', 'popular', id);
 
 // Définit l'attribut 'href' de l'élément HTML precedent avec une nouvelle URL qui inclut la page précédente
-precedent.setAttribute('href', `movie.php?page=${parseInt(id) - 1}`);
+precedent_f.setAttribute('href', `movie.php?page=${parseInt(id) - 1}`);
 
 // Définit l'attribut 'href' de l'élément HTML suivant avec une nouvelle URL qui inclut la page suivante
-suivant.setAttribute('href', `movie.php?page=${parseInt(id) + 1}`);
+suivant_f.setAttribute('href', `movie.php?page=${parseInt(id) + 1}`);
 
 
 } 
 
-if(series && precedent && suivant){
+if(series && precedent_s && suivant_s){
     const URL = window.location.href;
     const id = URL.split("=")[1];
   
@@ -136,9 +138,9 @@ if(series && precedent && suivant){
 
     FetchMoviesOrSeries('tv','series','popular',id);
     
-    precedent.setAttribute('href',`tv.php?page=${parseInt(id) - 1}`);
+    precedent_s.setAttribute('href',`tv.php?page=${parseInt(id) - 1}`);
 
-    suivant.setAttribute('href',`tv.php?page=${parseInt(id) + 1}`);
+    suivant_s.setAttribute('href',`tv.php?page=${parseInt(id) + 1}`);
 
 
 }

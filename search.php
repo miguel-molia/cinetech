@@ -68,4 +68,4 @@ if($_GET['search'] == ""){
        
     </section>
 </main>
-<script src="./search.js"></script>
+
