@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,9 +30,7 @@
 <?php
 session_start();
 require ('./header.php');
-if($_GET['search'] == ""){
-    header('location: index.php');
-}
+
 ?>
 <main>
     <section class="search_section">
@@ -68,4 +66,4 @@ if($_GET['search'] == ""){
        
     </section>
 </main>
-
+ -->

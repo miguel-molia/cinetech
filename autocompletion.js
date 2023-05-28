@@ -1,9 +1,18 @@
 
 
 const input = document.getElementById('search');
+const form = document.getElementsByTagName('form');
   const autocompleteResultsContainer = document.getElementById('autocomplete-results');
+    window.addEventListener('keyup',function(e){
+      e.preventDefault();
+      console.log(e.key)
+  // if(e.key == 'Enter'){ 
+  //   return false;
+  // }
+    });
 
   input.addEventListener('keyup', autocomplete);
+ 
 
   function autocomplete(event) {
     const query = input.value.trim();
@@ -13,7 +22,6 @@ const input = document.getElementById('search');
       autocompleteResultsContainer.innerHTML = '';
       return;
     }
-
     // Effectuer une requête à l'API de The Movie Database (TMDb)
     fetch('https://api.themoviedb.org/3/search/multi?api_key=e440027325819bdc8e51f492e2bac3f9&query=' + query)
       .then(response => response.json())
@@ -90,3 +98,4 @@ function initializeAutocomplete() {
   
   // Appel pour initialiser l'autocomplétion
   initializeAutocomplete();
+

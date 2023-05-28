@@ -11,20 +11,23 @@
 
 <header>
 
-<?php session_start(); ?>
+<?php session_start();
+if(isset($_GET['search'])){
+  header('location: index.php');
+} ?>
+
 
 <nav>
 
 <div class="myheader">
     <h1 id="title">CINETECH</h1>
     
-    <form action="search.php" method="get">
+    <form method="get">
   <input type="search" placeholder="Rechercher" name="search" id="search">
   <div id="autocomplete-results"></div>
-  <button type="submit" class="fas fa-search"></button>
+  
   
 </form>
-
 
 <div class="result" id="search-bar"></div>
 <ul>
